@@ -15,8 +15,9 @@ import { AboutSection } from "@/components/features/about-section/about-section"
 
 export const generateMetadata = (): Metadata => {
   return getBaseMetadata({
-    title: "Home Page",
-    description: "This is a simple landing page.",
+    title: "Barrio Junto | Community, Culture, and Football Lifestyle",
+    description:
+      "Barrio Junto is a community-based creative studio and lifestyle brand rooted in football culture. We bring neighborhoods together through parks, pitches, and purpose-driven projects that build authentic relationships and elevate the beautiful game.",
     path: "/",
     imagePath: "/images/default-og.jpg",
   });
