@@ -1,0 +1,4 @@
+- Finish logo in AI
+- Create Logo in React
+- Setup SEO
+- Build out layout

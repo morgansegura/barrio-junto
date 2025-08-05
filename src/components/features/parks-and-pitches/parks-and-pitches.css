@@ -1,0 +1,37 @@
+@reference "tailwindcss";
+
+.parks-and-pitches {
+  @apply relative bg-(--color-secondary-light);
+
+  .container {
+    @apply grid gap-y-12;
+  }
+
+  .grid {
+    @apply relative w-full grid gap-4 lg:grid-cols-2;
+  }
+
+  .image {
+    @apply relative z-0 overflow-hidden
+    before:pointer-events-none before:z-10 before:content-[""] before:bg-white/0 before:absolute before:inset-0 before:origin-center before:transition-all before:duration-700 before:ease-out  hover:before:bg-white/25;
+  }
+
+  .image img {
+    @apply scale-100 hover:scale-125 transition-all duration-1000 ease-out;
+  }
+
+  .image-block {
+    @apply relative flex flex-col items-start;
+  }
+
+  .image-details {
+    @apply flex flex-col flex-1 pointer-events-none z-10 inset-x-2.5 -bottom-2 p-5 border-4 border-double border-(--color-secondary)/50 transition-transform duration-300 ease-out tracking-wide my-2 text-(--color-primary);
+
+    h3 {
+      @apply font-bold text-xl uppercase;
+    }
+    p {
+      @apply text-lg;
+    }
+  }
+}

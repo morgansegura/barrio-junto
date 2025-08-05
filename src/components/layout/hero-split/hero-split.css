@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.hero-split {
+  @apply relative py-12 lg:py-24;
+}
+
+.hero-split-container {
+  @apply grid gap-y-12 lg:grid-cols-2 
+  lg:gap-x-18 lg:gap-y-0 xl:gap-x-24;
+}
+
+.hero-split-image {
+  @apply relative -z-0 mx-auto order-1 lg:order-0
+  before:content-[''] before:absolute 
+  before:-inset-y-2 before:right-1/2 before:-left-2 
+  before:bg-(--color-primary)
+  after:content-[''] after:absolute 
+  after:-inset-y-2 after:left-1/2 after:-right-2 
+  after:bg-(--color-secondary);
+
+  img {
+    @apply relative z-10;
+  }
+}
+
+.hero-split-content {
+  @apply flex flex-col justify-center max-w-xl mx-auto;
+}

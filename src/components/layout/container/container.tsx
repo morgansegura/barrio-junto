@@ -6,7 +6,7 @@ import "./container.css";
 type TContainerProps = {
   children: ReactNode;
   className?: string;
-  variant?: "default" | "fluid";
+  variant?: "default" | "fluid" | "wide";
   hasSpacing?: boolean;
 };
 

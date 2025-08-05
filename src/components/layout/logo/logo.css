@@ -1,0 +1,23 @@
+@reference 'tailwindcss';
+
+.logo {
+  &[data-logo-color="dark"] {
+    .logo-color-primary {
+      @apply fill-(--color-secondary);
+    }
+
+    .logo-color-secondary {
+      @apply fill-white;
+    }
+  }
+
+  &[data-logo-color="light"] {
+    .logo-color-primary {
+      @apply fill-(--color-primary);
+    }
+
+    .logo-color-secondary {
+      @apply fill-(--color-secondary);
+    }
+  }
+}

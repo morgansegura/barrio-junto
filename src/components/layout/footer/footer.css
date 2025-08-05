@@ -1,6 +1,5 @@
 @reference 'tailwindcss';
 
-.footer,
 .footer-container,
 .footer-nav {
   @apply flex items-center;
@@ -9,11 +8,21 @@
 .footer {
   @apply justify-center bg-(--color-primary);
 }
-
 .footer-container {
-  @apply py-24;
+  @apply flex-col pt-12 lg:flex-row lg:py-12;
+}
+.footer-logo {
+  @apply w-72;
 }
 
 .footer-nav {
-  @apply flex-1 justify-end gap-x-4 lg:gap-x-12;
+  @apply my-8 p-4 border border-white/50 rounded-sm justify-end gap-x-4 lg:ml-auto lg:gap-x-12;
+}
+
+.footer-nav .nav-item {
+  @apply text-(--color-secondary-light) text-sm md:text-base font-semibold rounded-md px-3 py-0.5 transition-colors duration-300 ease-out hover:bg-black/50 hover:text-white;
+}
+
+.footer .copyright {
+  @apply bg-black/50 text-center lg:text-right py-2 text-(--color-secondary) text-sm;
 }

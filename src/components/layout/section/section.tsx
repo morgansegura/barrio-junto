@@ -1,4 +1,4 @@
-import { JSX, ReactNode } from "react";
+import { CSSProperties, JSX, ReactNode } from "react";
 
 import { cn } from "@/lib/utils/cn";
 
@@ -8,14 +8,29 @@ type TSectionProps = {
   as?: keyof JSX.IntrinsicElements;
   children?: ReactNode;
   className?: string;
+  hasSpacing?: boolean;
+  id?: string;
+  style?: CSSProperties;
 };
 
 export function Section({
   as = "section",
   children,
   className,
+  hasSpacing = true,
+  id,
+  style,
 }: TSectionProps) {
   const Component = as;
 
-  return <Component className={cn("footer", className)}>{children}</Component>;
+  return (
+    <Component
+      id={id}
+      style={style}
+      className={cn("section", className)}
+      data-section-spacing={hasSpacing}
+    >
+      {children}
+    </Component>
+  );
 }

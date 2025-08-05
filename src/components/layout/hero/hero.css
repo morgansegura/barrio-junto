@@ -1,0 +1,42 @@
+@reference 'tailwindcss';
+
+.hero {
+  @apply z-0 relative lg:mb-auto before:content-[''] before:z-10 before:absolute before:inset-0 before:border-t-8 before:border-b-8 lg:before:border-t-10 lg:before:border-b-10 sm:before:border-double before:border-none sm:before:border-white;
+
+  .hero-image {
+    @apply relative z-0 max-w-[1800px] w-full mx-auto;
+  }
+
+  .hero-container {
+    @apply z-10 relative sm:pb-8 inset-0 flex flex-col 
+    md:px-8 sm:absolute;
+  }
+
+  .hero-content {
+    @apply border-double border-4 mt-4 sm:mt-8 border-white/50 py-4.5 px-6 bg-(--color-primary) sm:bg-stone-600/50;
+  }
+
+  .hero-heading {
+    @apply text-xl leading-none tracking-wide uppercase font-bold inline-flex text-white mb-2;
+  }
+
+  .hero-decription {
+    @apply text-lg max-w-md  text-white leading-snug;
+
+    strong {
+      @apply text-(--color-secondary) sm:text-(--color-secondary-light) tracking-wider;
+    }
+  }
+
+  &.hero-main {
+    .hero-container {
+      @apply items-end justify-end xl:items-start xl:justify-start;
+    }
+  }
+
+  &.hero-playmaker {
+    .hero-container {
+      @apply items-center justify-center;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@reference 'tailwindcss';
+
+.heading {
+  @apply relative inline-flex items-center gap-x-2;
+}

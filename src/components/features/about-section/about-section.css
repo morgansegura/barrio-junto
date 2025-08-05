@@ -1,0 +1,28 @@
+@reference "tailwindcss";
+
+.about-section {
+  .heading {
+    @apply flex flex-col text-3xl font-medium text-(--color-primary) uppercase
+  sm:text-6xl lg:text-5xl xl:text-6xl;
+
+    span {
+      @apply text-(--color-secondary);
+    }
+  }
+
+  .logo {
+    @apply w-32 mb-8;
+
+    .logo-color-primary {
+      @apply fill-(--color-primary);
+    }
+
+    .logo-color-secondary {
+      @apply fill-(--color-secondary);
+    }
+  }
+
+  .description {
+    @apply text-xl sm:text-2xl mt-4 text-(--color-primary) flex flex-col gap-4;
+  }
+}

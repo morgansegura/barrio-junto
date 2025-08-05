@@ -1,0 +1,67 @@
+@reference "tailwindcss";
+
+.shop {
+  @apply relative py-24 bg-(--color-secondary-light);
+}
+
+.shop-grid {
+  @apply grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-6;
+}
+
+.shop-item {
+  @apply relative flex;
+}
+
+.shop-badge {
+  &.details {
+    @apply px-1 uppercase font-medium;
+  }
+
+  &.sold-out {
+    @apply bg-(--color-secondary) px-1 uppercase font-medium;
+  }
+}
+
+.card {
+  @apply relative flex flex-col border border-neutral-100 rounded-xl overflow-hidden shadow;
+}
+
+.card-header {
+  @apply relative flex flex-col gap-y-1 w-full px-2 pt-2 border-t border-neutral-100;
+}
+
+.brand {
+  @apply uppercase font-semibold text-center;
+}
+
+.colors {
+  @apply uppercase flex gap-x-1 justify-center items-center text-xs tracking-wide text-neutral-500 font-semibold;
+}
+
+.color-item {
+  @apply border border-neutral-100 rounded-full w-5 h-5;
+
+  &.navy {
+    @apply bg-blue-950;
+  }
+}
+
+.card-content {
+  @apply relative px-4 pb-4 pt-2;
+}
+
+.card-title {
+  @apply text-xl text-center;
+}
+
+.card-description {
+  @apply text-center text-base text-neutral-500;
+}
+
+.card-button {
+  @apply bg-(--color-secondary) w-full font-semibold uppercase text-sm rounded-lg px-3 py-3;
+
+  &:disabled {
+    @apply opacity-50 pointer-events-none select-none;
+  }
+}

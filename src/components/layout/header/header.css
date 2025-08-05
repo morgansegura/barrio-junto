@@ -8,12 +8,35 @@
 
 .header {
   @apply justify-center;
-}
 
-.header-container {
-  @apply py-4;
-}
+  .header-container {
+    @apply py-4;
+  }
 
-.header-nav {
-  @apply flex-1 justify-end gap-x-4 lg:gap-x-12;
+  .header-logo {
+    @apply mt-11 w-full flex justify-center items-center gap-x-4 font-bold
+    lg:w-auto lg:mt-auto lg:justify-start;
+
+    .logo {
+      @apply w-12 lg:w-24;
+    }
+
+    .logo-color-primary {
+      @apply fill-(--color-primary);
+    }
+    .logo-color-secondary {
+      @apply fill-(--color-secondary);
+    }
+    .logo-text {
+      @apply text-(--color-primary) text-xl uppercase tracking-widest;
+    }
+  }
+
+  .header-nav {
+    @apply fixed z-20 bg-white/95 inset-x-0 px-4 py-2.5 flex top-0 flex-1 gap-x-4 justify-center border-b border-(--color-secondary-light)
+    lg:relative lg:gap-x-12 lg:justify-end lg:border-b-0;
+  }
+  .nav-item {
+    @apply text-(--color-primary) font-semibold rounded-md px-3 py-0.5 transition-colors duration-300 ease-out hover:bg-stone-200;
+  }
 }

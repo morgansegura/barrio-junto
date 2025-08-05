@@ -2,4 +2,8 @@
 
 .section {
   @apply relative;
+
+  &[data-section-spacing="true"] {
+    @apply py-10 lg:py-22;
+  }
 }

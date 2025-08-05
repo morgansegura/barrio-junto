@@ -1,0 +1,47 @@
+@reference "tailwindcss";
+
+.heading-block {
+  @apply relative max-w-4xl mx-auto;
+
+  .heading-block-inner {
+    @apply relative z-10 inset-0 bg-inherit pt-6 pb-8 px-4 lg:pt-8 lg:pb-10 lg:px-8;
+  }
+
+  &:before,
+  &:after {
+    @apply -z-0 content-[''] absolute inset-y-0 border-t-8 border-b-8;
+  }
+
+  &:before {
+    @apply border-(--color-primary) -left-2 right-1/2 border-l-8;
+  }
+
+  &:after {
+    @apply border-(--color-secondary) -right-2 left-1/2 border-r-8;
+  }
+}
+
+.heading-block-title {
+  @apply relative z-10 flex items-center justify-center uppercase font-medium mx-auto text-center p-4 gap-x-2 text-3xl md:text-4xl
+  lg:text-5xl;
+
+  span {
+    @apply flex justify-center;
+  }
+
+  span:first-child {
+    @apply text-(--color-primary);
+  }
+
+  span:last-child {
+    @apply text-(--color-secondary);
+  }
+}
+
+.heading-block-description {
+  @apply text-lg lg:text-2xl max-w-2xl text-center mx-auto text-(--color-primary);
+
+  p:last-child {
+    @apply font-bold;
+  }
+}
