@@ -18,7 +18,7 @@
     lg:w-auto lg:mt-auto lg:justify-start;
 
     .logo {
-      @apply w-12 lg:w-24;
+      @apply w-12 lg:w-20;
     }
 
     .logo-color-primary {
