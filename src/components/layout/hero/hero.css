@@ -13,7 +13,7 @@
   }
 
   .hero-content {
-    @apply border-double border-4 sm:mt-8 border-white/50 py-4.5 px-6 bg-(--color-primary) sm:bg-stone-600/50;
+    @apply border-double border-4 mt-4 sm:mt-8 border-white/50 py-4.5 px-6 bg-(--color-primary) sm:bg-stone-600/50;
   }
 
   .hero-heading {
@@ -33,7 +33,7 @@
       @apply items-end justify-end;
     }
     .hero-content {
-      @apply relative lg:-top-24;
+      @apply relative lg:-top-32;
     }
   }
 

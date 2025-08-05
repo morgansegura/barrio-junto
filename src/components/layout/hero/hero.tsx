@@ -5,7 +5,6 @@ import { Container } from "@/components/layout/container/container";
 
 import "./hero.css";
 import { ReactNode } from "react";
-import { Section } from "@/components/layout/section/section";
 
 type THeroProps = {
   className?: string;
@@ -23,17 +22,17 @@ export function Hero({
   priority = false,
 }: THeroProps) {
   return (
-    <Section className={cn("hero", className)} id={id} hasSpacing={false}>
+    <div className={cn("hero", className)} id={id}>
       <Image
         className="hero-image"
         src={media.src}
         alt={media.alt}
         priority={priority}
-        width={2500}
-        height={1402}
+        width={1800}
+        height={1800}
       />
 
       <Container className="hero-container">{children}</Container>
-    </Section>
+    </div>
   );
 }
