@@ -21,7 +21,7 @@ export function Playmakers() {
           description={content.headingBlock.subheading}
         />
       </Container>
-      <Hero media={content.image} className="hero-playmaker">
+      <Hero media={content.image} className="hero-playmaker" loading="lazy">
         <div className="hero-content items-center">
           <h2 className="hero-heading">{content.heading}</h2>
           <p className="hero-decription">{content.description}</p>

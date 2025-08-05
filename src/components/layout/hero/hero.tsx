@@ -10,6 +10,7 @@ type THeroProps = {
   className?: string;
   children?: ReactNode;
   id?: string;
+  loading?: "eager" | "lazy";
   media: { src: string; alt: string };
   priority?: boolean;
 };
@@ -18,6 +19,7 @@ export function Hero({
   className,
   children,
   id,
+  loading = undefined,
   media,
   priority = false,
 }: THeroProps) {
@@ -30,6 +32,7 @@ export function Hero({
         priority={priority}
         width={1800}
         height={1800}
+        loading={loading}
       />
 
       <Container className="hero-container">{children}</Container>

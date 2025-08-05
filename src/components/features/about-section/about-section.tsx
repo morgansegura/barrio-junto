@@ -16,6 +16,7 @@ export function AboutSection() {
       media={{
         src: aboutSection.image.src,
         alt: aboutSection.image.alt,
+        loading: "lazy",
       }}
     >
       <Logo className="logo" />

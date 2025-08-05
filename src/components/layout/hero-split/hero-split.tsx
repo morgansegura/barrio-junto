@@ -18,6 +18,7 @@ type THeroSplitProps = {
     alt: string;
     width?: number;
     height?: number;
+    loading?: "eager" | "lazy";
   };
 };
 
@@ -41,6 +42,7 @@ export function HeroSplit({
             alt={media.alt}
             width={media.width ?? 600}
             height={media.height ?? 600}
+            loading={media.loading}
           />
         </div>
         <div className="hero-split-content">{children}</div>

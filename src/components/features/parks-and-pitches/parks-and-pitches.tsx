@@ -24,6 +24,7 @@ export function ParksAndPitches() {
             alt={image.alt}
             width={imageSize.width}
             height={imageSize.height}
+            loading="lazy"
           />
         </div>
         <div className="image-details">
